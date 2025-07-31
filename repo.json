@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Anime1.me",
+    "url": "https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO/main/anime1me-extension/index.js",
+    "version": "1.0.0",
+    "language": "zh-tw",
+    "contentType": "anime"
+  }
+]

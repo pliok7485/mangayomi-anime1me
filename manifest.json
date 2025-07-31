@@ -1,0 +1,10 @@
+{
+  "name": "Anime1.me",
+  "version": "1.0.0",
+  "description": "Extension for anime1.me (Traditional Chinese anime source)",
+  "author": "YourName",
+  "language": "zh-tw",
+  "baseUrl": "https://anime1.me",
+  "contentType": "anime",
+  "sourceType": "single"
+}

@@ -6,7 +6,7 @@ async function getHomePage(page) {
       headers: { 'User-Agent': 'Mozilla/5.0' }
     });
     const root = parse(response.body);
-    const items = root.querySelectorAll('.post'); // 需調整為 anime1.me 的實際選擇器
+    const items = root.querySelectorAll('.post'); // 需調整為實際選擇器
     const results = items.map(item => ({
       name: item.querySelector('h2')?.text || 'Unknown Title',
       url: item.querySelector('a')?.getAttribute('href') || '',
@@ -22,9 +22,7 @@ async function getHomePage(page) {
 
 async function getDetails(url) {
   try {
-    const response = await http.get(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0' }
-    });
+    const response = await http.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
     const root = parse(response.body);
     const episodes = root.querySelectorAll('.episode-link').map(ep => ({
       name: ep.text || 'Episode',
@@ -62,9 +60,7 @@ async function getSearch(query) {
 
 async function getVideoList(url) {
   try {
-    const response = await http.get(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0' }
-    });
+    const response = await http.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
     const root = parse(response.body);
     const videoUrl = root.querySelector('iframe')?.getAttribute('src') || '';
     if (videoUrl) {
